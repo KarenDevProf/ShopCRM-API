@@ -1,0 +1,1 @@
+Scaffold-DbContext "Server=(localdb)\mssqllocaldb; Database=ShopCRM;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force -UseDatabaseNames

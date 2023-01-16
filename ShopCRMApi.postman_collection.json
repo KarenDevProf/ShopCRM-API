@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "08c86e47-66f4-4626-9f53-634441842a59",
+		"name": "ShopCRMApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Goods",
+			"item": [
+				{
+					"name": "goods",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/goods",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"goods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "goods/{article}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/goods/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"goods",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders/{ordernum}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/orders/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"orders",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders/{ordernum}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 2,\r\n  \"status\": 1,\r\n  \"orderedGoods\": [\r\n    {\r\n      \"goodsId\": 2,\r\n      \"count\": 3\r\n    },\r\n    {\r\n      \"goodsId\": 3,\r\n      \"count\": 1\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/orders/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"orders",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders/{ordernum}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderNumber\": 6,\r\n  \"userId\": 1,\r\n  \"status\": 1,\r\n  \"orderedGoods\": [\r\n    {\r\n      \"goodsId\": 2,\r\n      \"count\": 2\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/orders/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"orders",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders/{ordernum}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/orders/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"orders",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders/{ordernum}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"path\": \"status\",\r\n    \"op\": \"replace\",\r\n    \"value\": \"3\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44393/orders/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"orders",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orders/forDate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44393/orders/forDate?date=2023-01-16",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44393",
+							"path": [
+								"orders",
+								"forDate"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2023-01-16"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
